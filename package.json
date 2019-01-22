@@ -1,8 +1,6 @@
 {
   "scripts": {
-    "demo": "node hello.js"
-  },
-  "dependencies": {
-    "lodash": "^4.17.10"
+    "demo-v10": "./node-v10.15.0 --async-stack-traces hello.js",
+    "demo-v12": "./node-v12.0.0-v8-canary20181217e2f11a7b92 --async-stack-traces hello.js"
   }
 }

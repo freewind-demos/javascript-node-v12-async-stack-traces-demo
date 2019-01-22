@@ -1,3 +1,17 @@
-const _ = require('lodash')
+async function functionOne() {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 1);
+  });
+  throw new Error('Something Bad');
+}
 
-console.log('Hello, ' + _.capitalize('javascript'))
+async function functionTwo() {
+  await functionOne();
+}
+
+functionTwo()
+  .catch((error) => {
+    console.error(error);
+  });
